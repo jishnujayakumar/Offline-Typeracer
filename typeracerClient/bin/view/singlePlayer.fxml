@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.singlePlayer_controller">
+   <left>
+      <VBox prefHeight="605.0" prefWidth="247.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane alignment="TOP_RIGHT" centerShape="false" prefHeight="234.0" prefWidth="222.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="207.0" prefWidth="141.0" text="Logged in as : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" alignment="CENTER" editable="false" promptText="Loading ..." GridPane.columnIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="114.0" text="Best Speed" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="149.0" text="Average speed   " GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="139.0" text="Level   " GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="140.0" text="Matches Played  " GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="141.0" text="Matches Won  " GridPane.rowIndex="5" />
+                  <TextField fx:id="bestSpeed" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="averageSpeed" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="level" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="matchPlayed" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="matchWon" alignment="CENTER" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <VBox.margin>
+                  <Insets top="63.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="568.0" prefWidth="272.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="12.0" />
+         </BorderPane.margin>
+         <children>
+            <TextField fx:id="progressBox" alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="177.0" promptText="Progress">
+               <VBox.margin>
+                  <Insets left="50.0" right="90.0" top="63.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="chooseFile" alignment="CENTER" mnemonicParsing="false" onAction="#chooseFile" prefHeight="44.0" prefWidth="133.0" text="Select file">
+               <VBox.margin>
+                  <Insets left="50.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox prefHeight="519.0" prefWidth="820.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <TextArea fx:id="textarea" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+               <VBox.margin>
+                  <Insets left="45.0" top="63.0" />
+               </VBox.margin>
+            </TextArea>
+            <TextField fx:id="user_input" onKeyTyped="#checkWithTextarea" prefHeight="48.0" prefWidth="825.0">
+               <VBox.margin>
+                  <Insets left="45.0" top="25.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label alignment="CENTER" blendMode="DIFFERENCE" prefHeight="50.0" prefWidth="1420.0" text="Offline Typeracer" textAlignment="JUSTIFY" textFill="#21a2a4" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="51.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <bottom>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="1038.0" text="Copyright 2015" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

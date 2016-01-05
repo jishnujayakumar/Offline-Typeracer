@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://org.eclipse.fx.ide.jdt/1.0" buildDirectory="${project}/build">
+  <deploy packagingFormat="exe">
+    <application name="createServer" mainclass="model.createServer_model" version="1.0"/>
+    <info title="Offline Typeracer" vendor="P Jishnu Jaykumar, Vivek Kumar Singh, Hemant Kumar"/>
+  </deploy>
+  <signjar/>
+</anttasks:AntTask>
